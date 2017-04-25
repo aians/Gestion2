@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D50E840A-EE12-434F-8111-F161EDC6C21C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sistema_escolar</RootNamespace>
+    <AssemblyName>Sistema_escolar</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nivel__code_constructores.cs" />
+    <Compile Include="Bdconexion.cs" />
+    <Compile Include="busqueda_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqueda_alumno.Designer.cs">
+      <DependentUpon>busqueda_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="busqueda_profesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqueda_profesores.Designer.cs">
+      <DependentUpon>busqueda_profesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos_admin.Designer.cs">
+      <DependentUpon>Datos_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datos_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datos_alumno.Designer.cs">
+      <DependentUpon>datos_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datos_profesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datos_profesor.Designer.cs">
+      <DependentUpon>datos_profesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datos_tutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datos_tutor.Designer.cs">
+      <DependentUpon>datos_tutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iniciar sesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iniciar sesion.Designer.cs">
+      <DependentUpon>iniciar sesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menu_principal_admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menu_principal_admin.Designer.cs">
+      <DependentUpon>menu_principal_admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Nivel_registrar.cs" />
+    <EmbeddedResource Include="busqueda_alumno.resx">
+      <DependentUpon>busqueda_alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busqueda_profesores.resx">
+      <DependentUpon>busqueda_profesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos_admin.resx">
+      <DependentUpon>Datos_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datos_alumno.resx">
+      <DependentUpon>datos_alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datos_profesor.resx">
+      <DependentUpon>datos_profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datos_tutor.resx">
+      <DependentUpon>datos_tutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iniciar sesion.resx">
+      <DependentUpon>iniciar sesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menu_principal_admin.resx">
+      <DependentUpon>menu_principal_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
