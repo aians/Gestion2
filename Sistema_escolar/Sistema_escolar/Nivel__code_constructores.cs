@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_escolar
 {
+    //cnstructor
     class Nivel__code_constructores
     {
             public int idNivel { get; set; }
